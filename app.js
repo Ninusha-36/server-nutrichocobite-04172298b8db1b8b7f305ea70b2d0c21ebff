@@ -19,10 +19,12 @@ app.use(cors({
   origin: [
     "http://localhost:3000",
     "https://nutrichocobite.in",
-    "https://www.nutrichocobite.in"
+    "https://www.nutrichocobite.in",
+    "https://nutrichocobite.neenusha369.workers.dev"
   ],
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-  credentials: true
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(bodyParser.json());
