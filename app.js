@@ -70,7 +70,7 @@ app.use("/api/order/", ordersRoutes);
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.oewi9uh.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+    `mongodb+srv://nutriChocoDB:tpwAP3lMDNGFXpUqnj@cluster0.oewi9uh.mongodb.net/Ecommerce?retryWrites=true&w=majority`,
   )
   .then(() => {
     app.listen(process.env.PORT || 5000);
