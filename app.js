@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dns = require("dns");
 const path = require("path");
 const cors = require("cors");
+const fs = require('fs')
 
 const productsRoutes = require("./routes/products-routes");
 const usersRoutes = require("./routes/users-routes");
@@ -12,7 +13,7 @@ const ordersRoutes = require("./routes/orders-routes");
 
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 const app = express();
-
+ 
 
 app.use(cors({
   origin: [
@@ -48,6 +49,19 @@ app.use(express.static(path.join("public")));
 
 //   next();
 // });
+
+app.use((error, req, res, next) => {
+    if(req.file){
+      fs.unlink(req.file.path, err => {
+        console.log(err)
+      })
+    }
+    if(res.headerSent){
+        return next(error)
+    }
+    res.status(error.status || 505)
+    res.json({message : error.message || "An unknown error occured!"})
+})
 
 app.use("/api/products/", productsRoutes);
 app.use("/api/users/", usersRoutes);
