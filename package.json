@@ -1,0 +1,30 @@
+{
+  "name": "server-side",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "dns": "^0.2.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.6.3",
+    "mongoose-unique-validator": "^6.1.1",
+    "multer": "^2.2.0",
+    "nodemon": "^3.1.14",
+    "npm": "^11.16.0",
+    "uuid": "^14.0.1"
+  }
+}

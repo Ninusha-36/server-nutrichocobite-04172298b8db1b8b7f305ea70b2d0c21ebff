@@ -1,0 +1,9 @@
+{
+    "env" : {
+        "DB_USER": "nutriChocoDB",
+        "DB_PASSWORD": "tpwAP3lMDNGFXpUqnj",
+        "DB_NAME": "Ecommerce",
+        "GOOGLE_API_KEY": "...",
+        "JWT_KEY": "supersecret_dont_share"
+    }
+}
